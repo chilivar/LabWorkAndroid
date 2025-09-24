@@ -5,15 +5,103 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#57958D"
     tools:context=".MainActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/imageBox"
+        android:layout_width="273dp"
+        android:layout_height="229dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/basket" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="357dp"
+        android:layout_height="288dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageBox">
+
+        <RadioButton
+            android:id="@+id/bracketRdBtn"
+            android:layout_width="347dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="#DEC914"
+            android:text="Кронштейн"
+            android:textColor="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/logitechModelRdBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="#7C6C6C"
+            android:text="Logitech G102"
+            android:textColor="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/basicMouseRdBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="#7C6C6C"
+            android:text="Wireless Mouse черный"
+            android:textColor="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/rackRdBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="#7C6C6C"
+            android:text="Подставка для ноутбука "
+            android:textColor="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/routerRdBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="#7C6C6C"
+            android:text="Wi-Fi роутер TP-LINK TD-W8961N"
+            android:textColor="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/usbFlashExodiaRdBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="#7C6C6C"
+            android:text="USB Flash карта Kingston"
+            android:textColor="#FFFFFF" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/clearBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="344dp"
+        android:text="Очистить"
+        android:backgroundTint="#D3C176"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageBox"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="276dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Каталог: Компьютеры"
+        android:textAlignment="center"
+        android:textColor="#FBFBFB"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
