@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="auth_success">#216416</color>
+    <color name="auth_fail">#9E1D1D</color>
 </resources>
