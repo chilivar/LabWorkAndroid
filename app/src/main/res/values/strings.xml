@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">LabWorkAndroid</string>
+    <string name="head_name">Login</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="clear">Очистить</string>
+    <string name="sign_in">Войти</string>
+    <string name="show_password">Показать пароль</string>
+    <string name="authorization_true">Авторизация прошла успешно</string>
+    <string name="authorization_false">Авторизация не пройдена</string>
 </resources>
