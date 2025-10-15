@@ -5,15 +5,265 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#39818E"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:text="Кредитный калькулятор"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dateTxtBx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="12dp"
+        android:text="Дата"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="48dp"
+        android:text="Сумма кредита"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="92dp"
+        android:text="Первоначальный взнос"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="144dp"
+        android:text="Срок кредита"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="184dp"
+        android:text="Процентная ставка"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="228dp"
+        android:text="Выберите тип кредитования"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupCon"
+        android:layout_width="207dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24">
+
+        <RadioButton
+            android:id="@+id/annuityRdBtn"
+            android:layout_width="169dp"
+            android:layout_height="24dp"
+            android:text="Аннуитентный"
+            android:textColor="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/differentiatedRdBtn"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Дифферинцированный"
+            android:textColor="#FFFFFF" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/performBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="336dp"
+        android:text="Выполнить"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <Button
+        android:id="@+id/clearBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:text="Очистить"
+        app:layout_constraintStart_toEndOf="@+id/performBtn"
+        app:layout_constraintTop_toTopOf="@+id/performBtn" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="392dp"
+        android:text="Результаты расчета"
+        android:textColor="#E9E9E9"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <TextView
+        android:id="@+id/monthlyPaymentTxtBx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:text="Ежемесячный платеж"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+    <TextView
+        android:id="@+id/totalOverpayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:text="Общая переплата"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monthlyPaymentTxtBx" />
+
+    <CheckBox
+        android:id="@+id/showSheduleChckBx"
+        android:layout_width="168dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:text="Показать график платежей"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalOverpayment" />
+
+    <EditText
+        android:id="@+id/paymentScheduleTxt"
+        android:layout_width="359dp"
+        android:layout_height="157dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine|none"
+        android:focusable="false"
+        android:cursorVisible="false"
+        android:longClickable="false"
+        android:scrollbars="vertical"
+        android:textColor="#FDFDFD"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headSheduleTxt"
+        android:visibility="invisible" />
+
+
+    <TextView
+        android:id="@+id/headSheduleTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="600dp"
+        android:text="График платежей"
+        android:textColor="#FFF8F8"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"/>
+
+    <EditText
+        android:id="@+id/loanAmountTxtBx"
+        android:layout_width="171dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="Сумма"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/textView18"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/initialPaymentTxtBx"
+        android:layout_width="172dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="Взнос"
+        android:inputType="numberDecimal"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/textView21"
+        app:layout_constraintTop_toBottomOf="@+id/loanAmountTxtBx" />
+
+    <EditText
+        android:id="@+id/discountRateTxtBx"
+        android:layout_width="163dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textColor="#F2F2F2"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/textView23"
+        app:layout_constraintTop_toBottomOf="@+id/loanTermDrpDwn" />
+
+    <Spinner
+        android:id="@+id/loanTermDrpDwn"
+        android:layout_width="169dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="12dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/textView22"
+        app:layout_constraintTop_toBottomOf="@+id/initialPaymentTxtBx" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
